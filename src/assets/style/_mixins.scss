@@ -1,0 +1,18 @@
+@import 'variables';
+
+// width
+
+@mixin sidebar-width {
+    max-width: $sidebar-width !important;
+    width: $sidebar-width!important ;
+}
+
+// shadow
+
+@mixin drop-shadow-sm() {
+    filter: drop-shadow(5px 5px 20px $shadow);
+}
+
+@mixin inner-shadow-sm() {
+    box-shadow: inset 5px 5px 20px $shadow;
+}

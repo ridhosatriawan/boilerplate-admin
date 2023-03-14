@@ -1,0 +1,52 @@
+@import 'variables';
+@import 'mixins';
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// layout
+section.ant-layout.wrapper-layout {
+    min-height: 100vh
+}
+
+// navbar 
+header.ant-layout-header.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $base-white;
+    // @include drop-shadow-sm;
+    // z-index: 10;
+
+    h1.ant-typography {
+        margin: 0;
+        color: $base-blue;
+        font-family: $header-font;
+    }
+}
+
+// sidebar
+aside.ant-layout-sider.sidebar {
+    background-color: $base-white;
+    height: 100vh;
+    position: fixed;
+    overflow: auto;
+    @include sidebar-width;
+}
+
+// content
+main.ant-layout-content.content {
+    background-color: $base-gray;
+    @include inner-shadow-sm;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: $sidebar-width;
+
+    div.wrapper-children {
+        flex-grow: 1;
+    }
+}
